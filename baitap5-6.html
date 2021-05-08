@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>baitap5,6</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="baitap5-6.css">
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <button id="dangnhap" onclick="document.getElementById('id01').style.display='block'"  style="width:auto;">Login</button>
+    <div id="id01" class="modal">
+      <form id="login" class="modal-content animate" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="https://vr360vn.com/upload/ykienkhach/214432.jpg" alt="Avatar" class="avatar">
+        </div>
+    
+        <div class="container">
+          <div>
+          <label for="uname"><b>Username</b></label>
+          <input type="text" id="user" class="form-control" placeholder="Username" name="uname" aria-describedby="helpId" required>
+          <span id="loiuser"></span>
+        </div>
+        <div>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" id="pass" class="form-control" placeholder="Password" name="psw" aria-describedby="helpId" required>
+          <span id="loipass"></span>
+        </div>
+        <div class="input-group"> 
+          <button id="loadding" type="button" onclick="loaddinga()"; aria-label="">Login</button>
+          <span id="tcong" style="color: chartreuse;"></span>
+        </div>   
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#" onclick="fotgot();">password?</a></span>
+        </div> 
+      </form>
+
+      <form id="save" style="display:none">
+        <h2 style="text-align:center">Change Your PassWord</h2>
+        <div style="margin-left: 20px;" class="form-group col-md-11">
+          <label for=""></label>
+          <input type="password"  class="form-control" style="height: 50px;" name="" id="oldpass" aria-describedby="helpId" placeholder="Old Password">
+          <span id="loioldpass"></span>
+        </div>
+        <div style="margin-left: 20px;" class="form-group col-md-11">
+          <input type="password"  class="form-control" style="height:50px;" id="newpass" aria-describedby="helpId" placeholder="New Password">
+          <span id="loinewpass"></span>
+        </div>
+        <div class="input-group" style="margin-left:20px;">
+          <span class="input-group-btn col-md-11">
+              <button class="btn" style="width: 389px; background-color: green; color: white; font-size: 20px;" type="button" onclick="validatenew();" aria-label="">Save</button>
+          </span>
+        </div>
+        <div class="footer" style="text-align:center;">
+          <button type="button" class="btn btn-primary" onclick="back()">Back</button>
+        </div>
+    </form>
+    </div>
+    <script src="baitap5-6.js"></script>
+</body>
+</html>
